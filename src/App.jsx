@@ -80,7 +80,9 @@ function App() {
 
         {/* Protected Routes */}
         <Route element={<PrivateRoutes />}>
-          {user.userType === "organizer"? <Route element={<SubscriberList />} path="/" /> : user.userType === "attendee" ?<Route element={<Home />} path="/" />: <Route element={<OrganizerList isAutheticationRequests={true}/>} path="/" />}
+          {user.userType === "organizer"? 
+            <Route element={<SubscriberList />} index path="/" /> : user.userType === "attendee" ? 
+            <Route element={<Home />} index path="/" /> : <Route element={<OrganizerList isAutheticationRequests={true}/>} index path="/" />}
           
           <Route element={<Home />} path="/home" />
           <Route element={<About />} path="/about" />

@@ -28,3 +28,5 @@ lerna-debug.log*
 /server/**/*__pycache__
 /server/sample.json
 /server/firebase-credential.json
+/client/dist
+/dist
